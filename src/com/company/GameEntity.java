@@ -6,9 +6,9 @@ public class GameEntity {
     private int health;
 
     public boolean doesCollide(GameEntity other){
-        if (this.rect.intersects(other)){
+        if (this.rect.intersects(other.rect))
             return true;
-        }
+        return false;
     }
 
     public void takeDamage(int amount){
@@ -16,7 +16,7 @@ public class GameEntity {
     }
 
     public String toString(){
-        var info = health;
+        var info = "Entity: " +this.rect + " Health: " + this.health;//fix later
         return info;
 
     }

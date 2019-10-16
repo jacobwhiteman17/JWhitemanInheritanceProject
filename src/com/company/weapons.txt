@@ -1,0 +1,5 @@
+Wooden Sword 2
+Iron Sword 4
+Steel Sword 6
+Gold Sword 8
+Diamond Sword 10
