@@ -14,7 +14,7 @@ public class Player extends GameEntity {
     private int armor;
     private String[] weaponList;
 
-    Player() throws IOException {
+    public Player() throws IOException {
         var file = Files.readString(Paths.get("weapons.txt"));
         //weaponList = weapon;
         weaponList = file.split("\n");
@@ -47,6 +47,7 @@ public class Player extends GameEntity {
     }
 
     public String toString(){
-        super.toString();//fix
+        String hey = super.toString();
+        return hey;
     }
 }
