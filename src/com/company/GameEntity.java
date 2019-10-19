@@ -11,8 +11,9 @@ public class GameEntity {
         return false;
     }
 
-    public void takeDamage(int amount){
+    public int takeDamage(int amount){
         var getHit = health-amount;
+        return getHit;
     }
 
     public String toString(){

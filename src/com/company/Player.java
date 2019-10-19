@@ -3,7 +3,6 @@ package com.company;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -13,19 +12,18 @@ public class Player extends GameEntity {
     private int damageValue;
     private int armor;
     private String[] weaponList;
+    private Scanner input;
 
     public Player() throws IOException {
         var file = Files.readString(Paths.get("weapons.txt"));
-        //weaponList = weapon;
-        weaponList = file.split("\n");
+        weaponList = file.split(" ");
 
     }
 
-    public void swapWeapon(int newWeapon){
+    public void swapWeapon(){
         System.out.println(Arrays.toString(weaponList));
         System.out.println("Pick a weapon");
-        var input = new Scanner(System.in);
-        var choice = input.nextLine();
+        //var choice = input.nextLine();
         if (choice == weaponList)//finish later
     }
 
@@ -37,13 +35,15 @@ public class Player extends GameEntity {
         return armor;
     }
 
-    public void takeDamage(){
+    public float takeDamage(){
         var reducedDamage = armor/1000;
-        super.takeDamage(reducedDamage);//check this later
+        var q = super.takeDamage(reducedDamage);
+        return q;
     }
 
     public int attack(BadGuy enemy){
-        enemy.takeDamage();//fix
+        var ouch = enemy.takeDamage(damageValue);
+        return ouch;
     }
 
     public String toString(){
