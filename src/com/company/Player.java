@@ -1,8 +1,8 @@
 package com.company;
 
+import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -11,20 +11,30 @@ public class Player extends GameEntity {
     private int weaponDamage;
     private int damageValue;
     private int armor;
-    private String[] weaponList;
-    private Scanner input;
+    private ArrayList<String> weaponList;
+    private ArrayList<String> damageListStrings;
+    private ArrayList<Integer> damageList;
 
     public Player() throws IOException {
-        var file = Files.readString(Paths.get("weapons.txt"));
-        weaponList = file.split(" ");
+        Scanner file = new Scanner(new File("weapons.txt"));
+        while (file.hasNextLine()){
+            weaponList.add(file.nextLine().split(" ")[0]);
+            damageListStrings.add(file.nextLine().split(" ")[1]);
+        }
+
+        for (String i: damageListStrings){
+            var values = Integer.parseInt(i);
+            damageList.add(values);
+        }
 
     }
 
     public void swapWeapon(){
-        System.out.println(Arrays.toString(weaponList));
+        Scanner input = new Scanner(System.in);
+        System.out.println(weaponList.size());
         System.out.println("Pick a weapon");
-        //var choice = input.nextLine();
-        if (choice == weaponList)//finish later
+        var choice = input.nextLine();
+        for (String choice:)//finish later
     }
 
     public void changeArmor(int newArmorValue){
