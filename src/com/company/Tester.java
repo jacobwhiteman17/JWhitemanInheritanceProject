@@ -20,16 +20,17 @@ public class Tester {
                 myPlayer.changeArmor(armorRating);
                 System.out.println("Okay your armor value has been changed");
                 myPlayer.swapWeapon();//finish this
+                System.out.println("Swapped");
                 myBadGuy.attackClose(myPlayer);
                 myPlayer.attack(myBadGuy);
-                myPlayer.toString();
-                myBadGuy.toString();
-                myBoss.toString();
+                System.out.println(myPlayer.toString());
+                System.out.println(myBadGuy.toString());
+                System.out.println(myBoss.toString());
                 myPlayer.attack(myBoss);
                 myBoss.attackFromFar(myPlayer);
-                myPlayer.toString();
-                myBoss.toString();
-                myBadGuy.toString();
+                System.out.println(myPlayer.toString());
+                System.out.println(myBoss.toString());
+                System.out.println(myBadGuy.toString());
             }
             else{
             break;

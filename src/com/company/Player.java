@@ -21,12 +21,10 @@ public class Player extends GameEntity {
             weaponList.add(file.nextLine().split(" ")[0]);
             damageListStrings.add(file.nextLine().split(" ")[1]);
         }
-
         for (String i: damageListStrings){
             var values = Integer.parseInt(i);
             damageList.add(values);
         }
-
     }
 
     public void swapWeapon(){
@@ -34,7 +32,11 @@ public class Player extends GameEntity {
         System.out.println(weaponList.size());
         System.out.println("Pick a weapon");
         var choice = input.nextLine();
-        for (String choice:)//finish later
+        for (String i: weaponList){
+            if (weaponList.indexOf(i) == damageList.indexOf(i)){
+                damageValue = damageList.indexOf(i);
+                }
+    }
     }
 
     public void changeArmor(int newArmorValue){
