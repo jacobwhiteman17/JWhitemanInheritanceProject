@@ -11,7 +11,7 @@ public class Tester {
         var myBoss = new Boss();
         Scanner input = new Scanner(System.in);
         while (true){
-            System.out.println("Do you want to play? (Type Y if so");
+            System.out.println("Do you want to play? (Type Y if so)");
             var answer = input.nextLine();
             input.nextLine();
             if(answer.toUpperCase().equals("Y")){

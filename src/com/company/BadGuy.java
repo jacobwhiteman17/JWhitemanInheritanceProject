@@ -10,17 +10,17 @@ public class BadGuy extends GameEntity {
     }
 
     public int attackClose(GameEntity victim){
-        var damage = victim.takeDamage(closeUpDamage);
-        return damage;
+        victim.takeDamage(closeUpDamage);
+        return closeUpDamage;
     }
 
     public int attackFromFar(GameEntity victim){
-        var damage = victim.takeDamage(distanceDamage);
-        return damage;
+        victim.takeDamage(distanceDamage);
+        return distanceDamage;
     }
 
     public String toString(){
-        String hey = super.toString();
+        String hey = "Bad Guy " + super.toString();
         return hey;
     }
 }

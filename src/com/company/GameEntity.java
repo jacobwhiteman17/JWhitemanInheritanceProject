@@ -11,13 +11,13 @@ public class GameEntity {
         return false;
     }
 
-    public int takeDamage(int amount){
-        var getHit = health-amount;
-        return getHit;
+    public void takeDamage(int amount){
+        System.out.println(amount);
+        health-=amount;
     }
 
     public String toString(){
-        var info = "Entity: " +this.rect + " Health: " + this.health;//fix later
+        var info = " Health: " + health;
         return info;
 
     }
