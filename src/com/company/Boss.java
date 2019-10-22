@@ -16,7 +16,7 @@ public class Boss extends BadGuy{
 
     public int attackClose(GameEntity victim){
         var bossAttack = chooseSpecialAttack();
-        victim.takeDamage(bossAttack);
+        victim.takeDamage(bossAttack);//taking damage of attack
         return bossAttack;
     }
 
@@ -25,7 +25,7 @@ public class Boss extends BadGuy{
         if (randNum == 1)
             randNum = specialDamage1;
         if (randNum == 2)
-            randNum = specialDamage2;
+            randNum = specialDamage2;//selects specialAttack
         if (randNum == 3)
             randNum = specialDamage3;
         return randNum;

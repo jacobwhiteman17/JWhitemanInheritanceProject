@@ -11,7 +11,7 @@ public class BadGuy extends GameEntity {
 
     public int attackClose(GameEntity victim){
         victim.takeDamage(closeUpDamage);
-        return closeUpDamage;
+        return closeUpDamage;//straight forward
     }
 
     public int attackFromFar(GameEntity victim){

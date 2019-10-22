@@ -13,7 +13,6 @@ public class Tester {
         while (true){
             System.out.println("Do you want to play? (Type Y if so)");
             var answer = input.nextLine();
-            input.nextLine();
             if(answer.toUpperCase().equals("Y")){
                 System.out.println("What is your armor value?");
                 var armorRating = input.nextInt();
